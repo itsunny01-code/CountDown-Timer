@@ -1,2 +1,2 @@
-# CountDown-Timer
-CountDown in Javascript
+# Random-Color-Generator
+Random Color Generator in Javascript

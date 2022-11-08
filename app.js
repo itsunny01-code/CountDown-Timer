@@ -1,29 +1,17 @@
-const EndDate = " 19 November 2033  02:10 PM"
-const inputs = document.querySelectorAll("input")
+const Color_Generate = () => {
+    const Random_Number = Math.floor(Math.random()* 16777215)
 
-
-function count () {
-    const end = new Date(EndDate)
-    const now = new Date()
-    const Diff = (end - now) / 1000 ;
-
-    if(Diff < 0) return ;
-
-
-  inputs[0].value = Math.floor(Diff / 3600 / 24 );
-  inputs[1].value = Math.floor(Diff / 3600 ) % 24 ;
-  inputs[2].value = Math.floor(Diff / 60 ) % 60 ;
-  inputs[3].value = Math.floor(Diff) % 60 ;
+    const Random_Code = "#" + Random_Number.toString(16);
+    document.body.style.backgroundColor = Random_Code;
+    document.getElementById("clr-text").innerText = Random_Code ;
+    console.log(Random_Number , Random_Code);
 
 }
 
-count();
-
-setInterval(
-    () => {
-        count()
-    },
-    1000
+document.getElementById("btn").addEventListener(
+    "click"
+    ,
+    Color_Generate
 )
 
-// Over view > 1 Day = 24 HRS > 1 HRS = 60 MIN  > 60 MIN = 3600 SEC 
+Color_Generate();

@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: black;
+    transition: 1s ;
 }
 
 .container {
@@ -18,22 +19,21 @@ body {
     color: rgb(9, 79, 79);
     text-align: center;
     background-color: azure;
-    padding: 100px;
+    padding: 50px;
     box-shadow:  4px 5px 1px lightblue;
 }
 
-.countdown {
-    display: flex;
-    justify-content: center;
-}
-.count {
-    padding: 10px 10px;
+
+#btn {
+    padding: 20px 100px;
+    border-radius: 25px;
+    border: none;
+    background-color: black;
+    color: white;
+    cursor:pointer;
 }
 
-input {
-    padding: 20px;
-    border-radius: 25px;
-    margin-bottom: 10px;
-    text-align: center;
-    font-size: 20px;
+#btn:hover {
+   scale: 5.7;
+   transition: 60s;
 }
